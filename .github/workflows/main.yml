@@ -15,5 +15,5 @@ jobs:
       - name: 'Testing Github action'
         run: pwd
 
-       - name: 'Testing Printing'
-         run: echo docker
+      - name: 'Testing Printing'
+        run: echo Ahmed
