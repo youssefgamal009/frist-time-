@@ -23,6 +23,24 @@ jobs:
 
       - name: "Pushibg to docker hub"
         run: docker push ${{ secrets.DOCKER_USERNAME }}/myimage 
+
+
+
+        - name: bundle install
+          run: |
+               bundle config path vendor/bundle
+               bundle install --jobs 4 --retry 3 --frozen
+              bundle exec appraisal install
+
+        - name: RuboCop
+          run: bundle exec rubocop --parallel
+
+        - name: RSpec
+          run: |
+               bundle exec rake db:reset
+               bundle exec appraisal rspec
+          env:
+            RAILS_ENV: test
         
         
 
