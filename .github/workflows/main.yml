@@ -17,7 +17,7 @@ jobs:
       
       
       - name: "Login to Docker hub"
-        run: docker login --username youssefgamal009 --password dckr_pat_qmi-GDJzKDy0UnMBM0T-uQt2C5U
+        run: docker login --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_TOKEN }}
 
      
      
