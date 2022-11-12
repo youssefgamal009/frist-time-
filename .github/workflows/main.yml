@@ -15,7 +15,9 @@ jobs:
       - name: 'Before'
         run: ls
 
-      - uses: action/checkoot@v3 
+      - uses: action/checkoot@v3
 
       - name: 'After'
-        run: ls
+        run: ls 
+
+      
